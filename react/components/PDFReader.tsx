@@ -2,8 +2,8 @@ import React, {useState, useEffect} from 'react'
 
 type Props = {
   pdfUrl: string
-  width: number
-  height: number
+  width?: number
+  height?: number
 }
 
 const PDFReader:React.FC<Props> = ({pdfUrl, width, height}) => {
@@ -17,7 +17,7 @@ const PDFReader:React.FC<Props> = ({pdfUrl, width, height}) => {
   return (
     mounted
     ?
-      <div className='flex justify-center'>
+      <div className='flex justify-center mv4'>
         <object
           data = {pdfUrl}
           type = "application/pdf"
